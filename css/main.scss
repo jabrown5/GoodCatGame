@@ -1,0 +1,14 @@
+// variables
+$fave-color: green;
+$fave-font: "Open Sans", "Arial", sans-serif;
+$gonzo-blue: #4e51c7;
+
+body {
+	font-family: $fave-font;
+	color: $fave-color;
+}
+
+img {
+    width:100px; /* you can use % */
+    height:100px;
+}
