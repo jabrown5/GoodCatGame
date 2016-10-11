@@ -1,0 +1,10 @@
+body {
+  font-family: "Open Sans", "Arial", sans-serif;
+  background-color: #313133; }
+
+img {
+  width: 100px;
+  /* you can use % */
+  height: 100px; }
+
+/*# sourceMappingURL=main:css.map */
