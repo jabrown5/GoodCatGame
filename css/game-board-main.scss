@@ -33,6 +33,16 @@ header > h4 {
 
 }
 
+// header {
+// 	// header code
+// 	h1{
+// 		//h1 code
+// 	}
+// 	h4{
+
+// 	}
+// }
+
 .boxed {
 	border: 2px solid $font-color;
 	background-origin: border-box;
@@ -56,6 +66,9 @@ button {
 button:hover {
 	background-color: #bc6584;
 }
+area:hover {
+	background-color: #bc6584;
+}
 
 
 // help from http://www.sevensignature.com/blog/code/pure-css-popup-without-javascript/
@@ -77,16 +90,18 @@ button:hover {
 .popup-box {
   margin: 10% auto ;
   padding: 2%;
+  padding-bottom: 0;
   background: #fff;
   border-radius: 10px;
-  width: 30%;
-  height: 40% ;
+  width: 40%;
+  height: 38% ;
   position: relative;
   transition: all 5s ease-in-out;
 }
 .popup-box h6 {
   margin-top: 0;
   color: #333;
+  font-weight: bold;
   //font-family: Tahoma, Arial, sans-serif;
 }
 .popup-box .close {
@@ -105,4 +120,12 @@ button:hover {
 .popup-box .content {
   max-height: 60%;
   overflow: auto;
+}
+#btn-1, #btn-2, #btn-3 {
+	width: 98%;
+	height: auto;
+	//white-space: normal;
+	//line-spacing: 5%;
+	font-weight: normal;
+	text-transform: none;
 }

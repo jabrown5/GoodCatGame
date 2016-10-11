@@ -11,6 +11,12 @@ playerObject.score = 0;
 // 	console.log(playerObject);
 // };
 
+
+// function CatPlayer (chosenCat, goodCatPoints ) {
+// 	this.chosenCat = chosenCat;
+// 	this.goodCatPoints = goodCatPoints;
+// };
+
 //use this one if you're using jquery b/c you want to make sure jquery is loaded first before moving on to other functions in app.js
 $(document).ready(function(event) {
 	console.log("document ready");
@@ -18,25 +24,28 @@ $(document).ready(function(event) {
 	console.log(playerObject);
 
 	$("#kirby").on("click", function() {
-		// hold the selected cat "Kirby" in memory
-		var kirbyPlayer = new CatPlayer("Kirby",10);
-
+		// hold the selected cat "Kirby" & pre-existing "good cat pts" in memory
+		// Help from:  https://www.smashingmagazine.com/2010/10/local-storage-and-how-to-use-it/
+		localStorage.setItem('selectedCat','Kirby');
+		localStorage.setItem('goodCatPoints',10);
+		localStorage.setItem('weightedCatPoints',3);
 		// link to the game board
 		window.location.replace("game-board.html");
-
 	});
 	$("#bennett").on("click", function() {
-		// hold the selected cat "Bennett" in memory
-		var bennettPlayer = new CatPlayer("Bennett", 25);
-
+		// hold the selected cat "Bennett" & pre-existing "good cat pts" in memory
+		localStorage.setItem('selectedCat','Bennett');
+		localStorage.setItem('goodCatPoints', 25);
+		localStorage.setItem('weightedCatPoints',2);
+		// link to the game board
 		window.location.replace("game-board.html");
-
-
 	});
 	$("#lewis").on("click", function() {
-		// hold the selected cat "Lewis" in memory
-		var lewisPlayer = new CatPlayer("Lewis", 40);
-
+		// hold the selected cat "Lewis" & pre-existing "good cat pts" in memory
+		localStorage.setItem('selectedCat','Lewis');
+		localStorage.setItem('goodCatPoints', 40);
+		localStorage.setItem('weightedCatPoints',1);
+		// link to the game board
 		window.location.replace("game-board.html");
 	});
 
