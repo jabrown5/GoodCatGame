@@ -1,7 +1,9 @@
 
 // globally define an object that will hold ALL info about our game
 var playerObject = playerObject || {} ;
+playerObject.cat = "" ;
 playerObject.score = 0;
+playerObject.turn = 0;
 // playerObject.selectedCat = /* choose cat on index.html */ ;
 
 

@@ -3,21 +3,14 @@ body {
   background-color: #313133;
   color: #e6e6ed; }
 
-header {
-  text-align: left;
-  display: inline; }
-
-header > h1 {
+h1 {
   font-family: "Mystery Quest", cursive;
   font-size: 3rem;
-  margin: 1% 0 0.5% 0;
-  float: left; }
+  margin: 1% 0 0.5% 0; }
 
-header > h4 {
+h4 {
   font-size: 3rem;
-  margin: 1% 0 0.5% 0;
-  float: right;
-  clear: right; }
+  margin: 1% 0 0.5% 0; }
 
 .boxed {
   border: 2px solid #e6e6ed;

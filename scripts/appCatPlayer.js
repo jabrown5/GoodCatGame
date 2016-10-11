@@ -9,7 +9,7 @@ var selectedCat = localStorage.getItem('selectedCat');
 var goodCatPoints = localStorage.getItem('goodCatPoints');
 var weightedCatPoints = localStorage.getItem('weightedCatPoints');
 
-$("#player").append(selectedCat);
+$("#player-info").append(selectedCat);
 $("#score").append(goodCatPoints);
 
 // console.log(selectedCat, goodCatPoints, weightedCatPoints);
@@ -37,29 +37,29 @@ var actionCables = new Actions("The cables behind the TV look interesting. Do yo
 var actionLamp = new Actions("The lamp looks interesting. Do you..",["Attempt to wear the shade as a hat.","Give it a sniff and quick 'rub' so everyone knows it's yours.","It's really not that interesting. Just stay put."],[-1,2,4]);
 
 $("#sleep-btn").on("click", function() {
-	console.log("click works");
 	$("#action-text").text(actionSleep.action);
 	displayActionOptions(actionSleep.actionOptions);
+	actionButtonClick(actionSleep.score);
 });
 $("#litter-btn").on("click", function() {
-	console.log("click works");
 	$("#action-text").text(actionLitter.action);
 	displayActionOptions(actionLitter.actionOptions);
+	actionButtonClick(actionLitter.score);
 });
 $("#carpet").on("click", function() {
-	console.log("click works");
 	$("#action-text").text(actionPuke.action);
 	displayActionOptions(actionPuke.actionOptions);
+	actionButtonClick(actionPuke.score);
 });
 $("#tv").on("click", function() {
-	console.log("click works");
 	$("#action-text").text(actionCables.action);
 	displayActionOptions(actionCables.actionOptions);
+	actionButtonClick(actionCables.score);
 });
 $("#lamp").on("click", function() {
-	console.log("click works");
 	$("#action-text").text(actionLamp.action);
 	displayActionOptions(actionLamp.actionOptions);
+	actionButtonClick(actionLamp.score);
 });
 
 function displayActionOptions(actionOptionArray) {
@@ -67,6 +67,36 @@ function displayActionOptions(actionOptionArray) {
 	$("#btn-2").text(actionOptionArray[1])
 	$("#btn-3").text(actionOptionArray[2])
 };
+
+// SCORE KEEPING HELP FROM: https://www.experts-exchange.com/questions/23392123/Javascript-score-keeper.html
+function actionButtonClick(actionScore) {
+	var currentScore = $("#score").html();
+
+	$("#btn-1").on("click", function() {
+				// refactor the score keeping into one separate function
+		goodCatPoints = parseInt(currentScore, 10) + (parseInt(actionScore[0], 10)*parseInt(weightedCatPoints));
+		console.log(goodCatPoints);
+		$("#score").text(goodCatPoints);
+		// return goodCatPoints;
+	})
+	$("#btn-2").on("click", function() {
+		goodCatPoints = parseInt(currentScore, 10) + (parseInt(actionScore[1], 10)*parseInt(weightedCatPoints));
+		console.log(goodCatPoints);
+		$("#score").text(goodCatPoints);
+		// return goodCatPoints;
+
+	})
+	$("#btn-3").on("click", function() {
+		goodCatPoints = parseInt(currentScore, 10) + (parseInt(actionScore[2], 10)*parseInt(weightedCatPoints));
+		console.log(goodCatPoints);
+		$("#score").text(goodCatPoints);
+		// return goodCatPoints;
+
+	})
+
+};
+
+
 
 
 
