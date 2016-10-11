@@ -77,22 +77,29 @@ function actionButtonClick(actionScore) {
 		goodCatPoints = parseInt(currentScore, 10) + (parseInt(actionScore[0], 10)*parseInt(weightedCatPoints));
 		console.log(goodCatPoints);
 		$("#score").text(goodCatPoints);
-		// return goodCatPoints;
+		return goodCatPoints;
+		    $('#popup-box').modal('hide');
+
 	})
 	$("#btn-2").on("click", function() {
 		goodCatPoints = parseInt(currentScore, 10) + (parseInt(actionScore[1], 10)*parseInt(weightedCatPoints));
 		console.log(goodCatPoints);
 		$("#score").text(goodCatPoints);
-		// return goodCatPoints;
+		return goodCatPoints;
+				    $('#popup-box').modal('hide');
+
 
 	})
 	$("#btn-3").on("click", function() {
 		goodCatPoints = parseInt(currentScore, 10) + (parseInt(actionScore[2], 10)*parseInt(weightedCatPoints));
 		console.log(goodCatPoints);
 		$("#score").text(goodCatPoints);
-		// return goodCatPoints;
+		return goodCatPoints;
+				    $('#popup-box').modal('hide');
+
 
 	})
+
 
 };
 
