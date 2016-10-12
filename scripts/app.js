@@ -1,9 +1,8 @@
-
 // globally define an object that will hold ALL info about our game
 var playerObject = playerObject || {} ;
-playerObject.cat = "" ;
-playerObject.score = 0;
-playerObject.turn = 0;
+// playerObject.cat = "" ;
+// playerObject.score = 0;
+// playerObject.turn = 0;
 // playerObject.selectedCat = /* choose cat on index.html */ ;
 
 
@@ -11,12 +10,6 @@ playerObject.turn = 0;
 // 	console.log("window onload");
 // 	console.log(event);
 // 	console.log(playerObject);
-// };
-
-
-// function CatPlayer (chosenCat, goodCatPoints ) {
-// 	this.chosenCat = chosenCat;
-// 	this.goodCatPoints = goodCatPoints;
 // };
 
 //use this one if you're using jquery b/c you want to make sure jquery is loaded first before moving on to other functions in app.js
@@ -33,6 +26,9 @@ $(document).ready(function(event) {
 		localStorage.setItem('weightedCatPoints',3);
 		// link to the game board
 		window.location.replace("game-board.html");
+		// playerObject.cat = "Kirby";
+		//return playerObject.cat;
+
 	});
 	$("#bennett").on("click", function() {
 		// hold the selected cat "Bennett" & pre-existing "good cat pts" in memory
@@ -41,6 +37,8 @@ $(document).ready(function(event) {
 		localStorage.setItem('weightedCatPoints',2);
 		// link to the game board
 		window.location.replace("game-board.html");
+		// playerObject.cat = "Bennett";
+
 	});
 	$("#lewis").on("click", function() {
 		// hold the selected cat "Lewis" & pre-existing "good cat pts" in memory
@@ -49,6 +47,8 @@ $(document).ready(function(event) {
 		localStorage.setItem('weightedCatPoints',1);
 		// link to the game board
 		window.location.replace("game-board.html");
+		// playerObject.cat = "Lewis";
+
 	});
 
 

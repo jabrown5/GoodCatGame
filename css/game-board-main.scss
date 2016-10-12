@@ -108,16 +108,30 @@ area:hover {
   font-weight: bold;
   //font-family: Tahoma, Arial, sans-serif;
 }
+// .popup-box .close {
+//   position: absolute;
+//   top: 2%;
+//   right: 2%;
+//   transition: all 200ms;
+//   font-size: 30px;
+//   font-weight: bold;
+//   text-decoration: none;
+//   color: $background-color;
+// }
 .popup-box .close {
   position: absolute;
-  top: 2%;
-  right: 2%;
+  // top: 2%;
+  // right: 2%;
+  bottom: 2%;
+  //text-align: center;
   transition: all 200ms;
   font-size: 30px;
   font-weight: bold;
+  font-size: 2rem;
   text-decoration: none;
   color: $background-color;
 }
+
 .popup-box .close:hover {
   color: #06D85F;
 }
