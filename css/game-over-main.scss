@@ -1,0 +1,64 @@
+// variables
+$background-color: rgb(49, 49, 51);
+$standard-font: "Open Sans", "Arial", sans-serif;
+$header-font: 'Mystery Quest', cursive;
+$font-color: #e6e6ed;
+$base-font: 16px;
+$header-font-size: 3rem; // 300%;
+$sub-header-font-size: 1.5rem; // 150%
+$em-header: 0.75rem; // 75%
+$p-font: 1rem; // 100%
+
+body {
+	font-family: $standard-font;
+	background-color: $background-color;
+	color: $font-color;
+}
+header {
+	text-align: center;
+}
+header > h1 {
+	font-family: $header-font;
+	font-size: 6rem;
+	margin: 1% 0 0.5% 0;
+}
+header > h5 {
+	margin: 0.5% 0;
+	padding: 0.5% 0 1% 0;
+}
+header > p {
+	margin: 0.5% 0;
+	padding: 0.5% 0 1% 0;
+}
+
+
+div {
+	text-align: justify;
+}
+.boxed {
+	border: 2px solid $font-color;
+	//background-origin: border-box;
+	background-color: #555556;
+}
+
+img {
+    width:90%; 
+    height:90%;
+    margin: 4% 5%;
+
+}
+
+div > h5 {
+	font-family: 'Mystery Quest', cursive;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+p {
+	//padding: 5%;
+    margin: 2% 8%;
+    float: right;
+}
+#game-over {
+	height: 25%;
+}

@@ -1,35 +1,20 @@
-// $(document).ready(function(event) {
-// 	console.log("document ready");
-	// HELP FROM:  https://github.com/davidjbradshaw/image-map-resizer
-	$('map').imageMapResize();
+// HELP FROM:  https://github.com/davidjbradshaw/image-map-resizer
+$('map').imageMapResize();
 
 var playerObject = playerObject || {} ;
 
 var selectedCat = localStorage.getItem('selectedCat');
 var goodCatPoints = localStorage.getItem('goodCatPoints');
 var weightedCatPoints = localStorage.getItem('weightedCatPoints');
-// var turns = 8 ;
 
 $("#player-info").append(selectedCat);
 $("#score").append(goodCatPoints);
-
-// console.log(selectedCat, goodCatPoints, weightedCatPoints);
-
-// function CatPlayer (chosenCat, goodCatPointsStart, weightedCatPoints ) {
-// 	this.chosenCat = chosenCat;
-// 	this.goodCatPointsStart = goodCatPointsStart;
-// 	this.weightedCatPoints = weightedCatPoints;
-// };
-
-// var kirbyPlayer = new CatPlayer("Kirby", 10, 3);
-// var bennettPlayer = new CatPlayer("Bennett", 25, 2);
-// var lewisPlayer = new CatPlayer("Lewis", 40, 1);
 
 function Actions(action, actionOptions, score) {
 	this.action = action;
 	this.actionOptions = actionOptions;
 	this.score = score;
-}
+};
 
 var actionLitter = new Actions("You have to use the litter box. Do you...", ["Dig a neat hole, do your business, and tidy up.","Dig like a maniac, kicking litter everywhere.","Poop just outside the door of the litterbox."],[2,0,-2]);
 var actionSleep = new Actions("You're a bit tired and are considering a nap.  Do you...",["Attack that other cat laying in your spot on the couch!","Block the entry to the other room while you snooze.","Look for a nice, quiet spot away from everyone and nap!"],[-3,0,3]);
@@ -69,49 +54,45 @@ function displayActionOptions(actionOptionArray) {
 	$("#btn-3").text(actionOptionArray[2])
 };
 
+// Closing the action box on click and updating the player score
+// only update pts once you've selected an action and moved on
+function closeActionBox() {
+	$(".close").on("click", function() {
+		$("#score").text(goodCatPoints);
+	});
+};
+
 // SCORE KEEPING HELP FROM: https://www.experts-exchange.com/questions/23392123/Javascript-score-keeper.html
 function actionButtonClick(actionScore) {
 	var currentScore = $("#score").html();
+	//var currentScore = playerObject.goodCatPoints;
 
 	$("#btn-1").on("click", function() {
 		// UPDATE UPDATE UPDATE: refactor the score keeping into one separate function
 		goodCatPoints = parseInt(currentScore, 10) + (parseInt(actionScore[0], 10)*parseInt(weightedCatPoints));
 		console.log(goodCatPoints);
-		// only update pts once you've selected an action and moved on
-		$(".close").on("click", function() {
-			$("#score").text(goodCatPoints);
-						//playerObject.turnUpdate();
-
-		});
 		//return goodCatPoints;
+		closeActionBox();
 	});
 	$("#btn-2").on("click", function() {
 		goodCatPoints = parseInt(currentScore, 10) + (parseInt(actionScore[1], 10)*parseInt(weightedCatPoints));
 		console.log(goodCatPoints);
-		$(".close").on("click", function() {
-			$("#score").text(goodCatPoints);
-						//playerObject.turnUpdate();
-		});
 		//return goodCatPoints;
+		closeActionBox();
+
 	});
 	$("#btn-3").on("click", function() {
 		goodCatPoints = parseInt(currentScore, 10) + (parseInt(actionScore[2], 10)*parseInt(weightedCatPoints));
 		console.log(goodCatPoints);
-		$(".close").on("click", function() {
-			$("#score").text(goodCatPoints);
-
-						//playerObject.turnUpdate();
-		});
-
 		//return goodCatPoints;
+		closeActionBox();
+
 	});
 		playerObject.turnUpdate();
+		playerObject.goodCatPoints = currentScore;
+
+		localStorage.setItem('goodCatPoints',currentScore);
+
 
 };
 
-
-
-
-
-
-// });
