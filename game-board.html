@@ -26,12 +26,6 @@
   <!-- BELOW ADDED BY ME -->
   <link rel="stylesheet" type="text/css" href="css/game-board-main.css">
 
-  <!-- JS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->  
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
-  <script type="text/javascript" src="scripts/appImageResizer.js"></script>
-  <script type="text/javascript" src="scripts/appCatPlayer.js"></script>
-  <script type="text/javascript" src="scripts/app.js"></script>
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -51,12 +45,16 @@
         <h1 class="eight columns">Who's a Good Cat?!</h1>
       </div>
 
-      <div class="three columns">
+      <div class="two columns">
         <h4 id="player-info"></h4>
       </div>
 
       <div class="one column">
         <h4 id="score"></h4>
+      </div>
+
+      <div class="one column">
+        <h4 id="turn-info"></h4>
       </div>
 
     </header>
@@ -105,10 +103,11 @@
 <!--  help from http://www.sevensignature.com/blog/code/pure-css-popup-without-javascript/
                 http://wesbos.com/times-html-entity-close-button/
  -->
+
        <div id="popup-box" class="overlay">
         <div class="popup-box">
           <h6 id="action-text"></h6>
-          <a class="close" href="#"><!-- &times; -->Move on to other cat business!</a>
+          <a class="close" href="#">Move on to other cat business!</a>
           <div class="content">
             <button id="btn-1"></button>
             <button id="btn-2"></button>
@@ -118,8 +117,24 @@
       </div>
 
 
+<!--   <div id="ex1" style="display:none;">
+    <p>Thanks for clicking.  That felt good.  <a href="#" rel="modal:close">Close</a> or press ESC</p>
+  </div> -->
+
+  <!-- Link to open the modal -->
+<!--   <p><a href="#ex1" rel="modal:open">Open Modal</a></p>
+ -->
+
+
   </div>
 
+  <!-- JS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->  
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
+  <script type="text/javascript" src="scripts/appImageResizer.js"></script>
+  <script type="text/javascript" src="scripts/appJqueryModal.js"></script>
+  <script type="text/javascript" src="scripts/appCatPlayer.js"></script>
+  <script type="text/javascript" src="scripts/app.js"></script>
 
 
 <!-- End Document

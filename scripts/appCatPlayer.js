@@ -1,5 +1,5 @@
-$(document).ready(function(event) {
-	console.log("document ready");
+// $(document).ready(function(event) {
+// 	console.log("document ready");
 	// HELP FROM:  https://github.com/davidjbradshaw/image-map-resizer
 	$('map').imageMapResize();
 
@@ -8,6 +8,7 @@ var playerObject = playerObject || {} ;
 var selectedCat = localStorage.getItem('selectedCat');
 var goodCatPoints = localStorage.getItem('goodCatPoints');
 var weightedCatPoints = localStorage.getItem('weightedCatPoints');
+// var turns = 8 ;
 
 $("#player-info").append(selectedCat);
 $("#score").append(goodCatPoints);
@@ -73,34 +74,39 @@ function actionButtonClick(actionScore) {
 	var currentScore = $("#score").html();
 
 	$("#btn-1").on("click", function() {
-				// refactor the score keeping into one separate function
+		// UPDATE UPDATE UPDATE: refactor the score keeping into one separate function
 		goodCatPoints = parseInt(currentScore, 10) + (parseInt(actionScore[0], 10)*parseInt(weightedCatPoints));
 		console.log(goodCatPoints);
-		$("#score").text(goodCatPoints);
-		return goodCatPoints;
-		    $('#popup-box').modal('hide');
+		// only update pts once you've selected an action and moved on
+		$(".close").on("click", function() {
+			$("#score").text(goodCatPoints);
 
-	})
+
+		});
+		//return goodCatPoints;
+						playerObject.turnUpdate();
+	});
 	$("#btn-2").on("click", function() {
 		goodCatPoints = parseInt(currentScore, 10) + (parseInt(actionScore[1], 10)*parseInt(weightedCatPoints));
 		console.log(goodCatPoints);
-		$("#score").text(goodCatPoints);
-		return goodCatPoints;
-				    $('#popup-box').modal('hide');
+		$(".close").on("click", function() {
+			$("#score").text(goodCatPoints);
 
-
-	})
+		});
+		//return goodCatPoints;
+			playerObject.turnUpdate();
+	});
 	$("#btn-3").on("click", function() {
 		goodCatPoints = parseInt(currentScore, 10) + (parseInt(actionScore[2], 10)*parseInt(weightedCatPoints));
 		console.log(goodCatPoints);
-		$("#score").text(goodCatPoints);
-		return goodCatPoints;
-				    $('#popup-box').modal('hide');
+		$(".close").on("click", function() {
+			$("#score").text(goodCatPoints);
+			
 
-
-	})
-
-
+		});
+		//return goodCatPoints;
+						playerObject.turnUpdate();
+	});
 };
 
 
@@ -108,4 +114,4 @@ function actionButtonClick(actionScore) {
 
 
 
-});
+// });
