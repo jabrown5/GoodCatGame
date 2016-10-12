@@ -80,33 +80,33 @@ function actionButtonClick(actionScore) {
 		// only update pts once you've selected an action and moved on
 		$(".close").on("click", function() {
 			$("#score").text(goodCatPoints);
-
+						//playerObject.turnUpdate();
 
 		});
 		//return goodCatPoints;
-						playerObject.turnUpdate();
 	});
 	$("#btn-2").on("click", function() {
 		goodCatPoints = parseInt(currentScore, 10) + (parseInt(actionScore[1], 10)*parseInt(weightedCatPoints));
 		console.log(goodCatPoints);
 		$(".close").on("click", function() {
 			$("#score").text(goodCatPoints);
-
+						//playerObject.turnUpdate();
 		});
 		//return goodCatPoints;
-			playerObject.turnUpdate();
 	});
 	$("#btn-3").on("click", function() {
 		goodCatPoints = parseInt(currentScore, 10) + (parseInt(actionScore[2], 10)*parseInt(weightedCatPoints));
 		console.log(goodCatPoints);
 		$(".close").on("click", function() {
 			$("#score").text(goodCatPoints);
-			
 
+						//playerObject.turnUpdate();
 		});
+
 		//return goodCatPoints;
-						playerObject.turnUpdate();
 	});
+		playerObject.turnUpdate();
+
 };
 
 

@@ -1,19 +1,30 @@
 // globally define an object that will hold ALL info about our game
 var playerObject = playerObject || {
-	cat: "" ,
+	cat: localStorage.getItem('selectedCat') ,
 	turns: 8,
-	//score: ,
+	goodCatPoints: parseInt(localStorage.getItem('goodCatPoints'), 10),
+	scoreUpdate: function(){
+		// Build a function to keep score here instead of in appCatPlayer.js
+	},
 	turnUpdate: function() {
 		this.turns = this.turns - 1 ;
-		//$("#turn-info").html(this.turns);
-		console.log(turns);
+		$("#turn-info").html(this.turns);
+		console.log(this.turns);
+		this.gameOver();
 	},
 	gameOver: function() {
-		if (turns<=0) {
-			console.log("game over");
-		}
+		if (this.turns===0) {
+			// HELP FROM: https://stackoverflow.com/questions/17150171/page-redirect-after-x-seconds-wait-using-javascript
+			$(document).ready(function () {
+			    window.setTimeout(function () {
+			        location.href = "index.html";
+			    }, 4000);
+			});
+		};
 	}
-} ;
+	
+};
+
 // playerObject.cat = "" ;
 // playerObject.score = 0;
 // playerObject.turn = 0;
