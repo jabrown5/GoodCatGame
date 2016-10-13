@@ -1,14 +1,12 @@
-// globally define an object that will hold ALL info about our game
+// globally defined an object that will hold ALL info about our game
 var playerObject = playerObject || {
 	cat: localStorage.getItem('selectedCat') ,
 	turns: 8,
 	goodCatPoints: parseInt(localStorage.getItem('goodCatPoints'), 10),
-	scoreUpdate: function(){
-		// Build a function to keep score here instead of in appCatPlayer.js
-	},
 	scoreUpdate: function() {
-
+		// Build a function to keep score here instead of in appCatPlayer.js
 		// $("#score").html(this.goodCatPoints);
+		// this.goodCatPoints = currentScore;
 	},
 	turnUpdate: function() {
 		this.turns = this.turns - 1 ;
@@ -28,9 +26,10 @@ var playerObject = playerObject || {
 	}	
 };
 
+// User selects their "player cat" here
 $("#kirby").on("click", function() {
-	// hold the selected cat "Kirby" & pre-existing "good cat pts" in memory
 	// Help from:  https://www.smashingmagazine.com/2010/10/local-storage-and-how-to-use-it/
+	// hold the selected cat "Kirby" & pre-existing "good cat pts" in memory so it can be grabbed for use on the "game-board" screen.
 	localStorage.setItem('selectedCat','Kirby');
 	localStorage.setItem('goodCatPoints',10);
 	localStorage.setItem('weightedCatPoints',3);
@@ -38,19 +37,15 @@ $("#kirby").on("click", function() {
 	window.location.replace("game-board.html");
 });
 $("#bennett").on("click", function() {
-	// hold the selected cat "Bennett" & pre-existing "good cat pts" in memory
 	localStorage.setItem('selectedCat','Bennett');
 	localStorage.setItem('goodCatPoints', 25);
 	localStorage.setItem('weightedCatPoints',2);
-	// link to the game board
 	window.location.replace("game-board.html");
 });
 $("#lewis").on("click", function() {
-	// hold the selected cat "Lewis" & pre-existing "good cat pts" in memory
 	localStorage.setItem('selectedCat','Lewis');
 	localStorage.setItem('goodCatPoints', 40);
 	localStorage.setItem('weightedCatPoints',1);
-	// link to the game board
 	window.location.replace("game-board.html");
 });
 

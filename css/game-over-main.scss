@@ -26,38 +26,23 @@ header > h5 {
 	margin: 0.5% 0;
 	padding: 0.5% 0 1% 0;
 }
-// header > p {
-// 	margin: 0.5% 0;
-// 	padding: 0.5% 0 1% 0;
-// }
 
-
-// div {
-// 	text-align: justify;
-// }
 .row {
 	display: inline;
 }
 .boxed {
 	border: 2px solid $font-color;
-	//background-origin: border-box;
 	background-color: #555556;
-
 }
 
 img {
     width:92%; 
     height:92%;
     margin: 4% 4%;
-
 }
-
 #cat-name {
 	font-family: $header-font;
 	text-align: center;
-	// margin: 0 0 4% 0;
-	//padding: 0 0 4% 0;
-	//height: 25%;
 	margin-bottom: 2%;
 }
 #game-over {
@@ -65,12 +50,6 @@ img {
 }
 p {
 	padding: 5%;
-    // margin: 2% 8%;
-    //float: right;
     text-align: justify;
     font-size: 2rem;
-
 }
-// #game-over {
-// 	height: 25%;
-// }

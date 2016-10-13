@@ -1,41 +1,24 @@
 var playerObject = playerObject || {} ;
 
+// Grabbing info from prior page to populate on 'game over' page
 var selectedCat = localStorage.getItem('selectedCat');
-// var goodCatPoints = localStorage.getItem('goodCatPoints');
 var weightedCatPoints = localStorage.getItem('weightedCatPoints');
 var goodCatPoints = parseInt(localStorage.getItem('goodCatPoints'), 10)
 
+// Appending image of selected cat on game over page
 if (selectedCat === "Kirby") {
 	$("#cat-image").append('<img src="images/thumb_cat-sweet-kitty-animals-57416 copy_1024.jpg" alt="" title="" />');     
 } else if (selectedCat === "Bennett"){
 	$("#cat-image").append('<img src="images/thumb_pexels-photo copy_1024.jpg" alt="" title=""/>');     
 } else {
 	$("#cat-image").append('<img src="images/thumb_cat-feline-cat-face-cat-s-eyes-73819 copy_1024.jpg" alt="" title=""/>');     
-}
+};
 
+// Appending selected cat's name onto game over page
 $("#cat-name").append(selectedCat);
-// $("p").append(goodCatPoints);
 
-// if (goodCatPoints <= 0 ) {
-// 	$("#game-over-text").html('How is that even possible? You are in the red for bad cat points with ' + goodCatPoints +'.');     
-// } else if (goodCatPoints <= 20 ) {
-// 	$("#game-over-text").html('Hmmm.  Well, you were rather naughty today.  Bady Kitty!');     
-// } else if (goodCatPoints >= 40 ){
-// 	$("#game-over-text").html('Hey!  Looks like you were a really good cat today with a total of ' + goodCatPoints + ' good cat points!');     
-// } else {
-// 	$("#game-over-text").html('Not bad!  With ' + goodCatPoints + ' I would say you did an ok job of being a good cat');     
-// }
 
-// if (selectedCat === "Kirby" && goodCatPoints <= 0 ) {
-// 	$("#game-over-text").html('Well, the expectations were really low for you to begin with and you did not disappoint. But still ... negative Good Cat Points? Come on now. Anyway, you ended the day with ' + goodCatPoints +' Good Cat Points.');     
-// } else if (goodCatPoints <= 20 ) {
-// 	$("#game-over-text").html('Hmmm.  Well, you were rather naughty today.  Bady Kitty!');     
-// } else if (goodCatPoints >= 40 ){
-// 	$("#game-over-text").html('Hey!  Looks like you were a really good cat today with a total of ' + goodCatPoints + ' good cat points!');     
-// } else {
-// 	$("#game-over-text").html('Not bad!  With ' + goodCatPoints + ' I would say you did an ok job of being a good cat');     
-// }
-
+// Customizing the game over text based on selected cat, his history of being a good cat, and his current standing w/ regard to how the game was played and how many Good Cat Points were earned or lost.
 if (selectedCat === "Kirby" ) {
 	if (goodCatPoints <=0 ) {
 	$("#game-over-text").html("Well, the expectations were really low for you to begin with and you did not disappoint. But still ... negative Good Cat Points? Come on now. Anyway, you ended the day with " + goodCatPoints + " Good Cat Points."); 
@@ -64,10 +47,10 @@ if (selectedCat === "Kirby" ) {
 	} else if (goodCatPoints<=20) {
 	$("#game-over-text").html("For you, this is pretty bad.  You must have engaged in alot of naughtiness to fall this far. How disappointing. Try to improve on your score of " + goodCatPoints + " Good Cat Points."); 
 	}  else if (goodCatPoints <= 40) {
-	$("#game-over-text").html("Well, it's not great given your sterling reputation but who doesn't want to let their hair down every once in a while? You ended the day with " + goodCatPoints + " Good Cat Points."); 
+	$("#game-over-text").html("Well, it's not great given your sterling reputation but who doesn't want to let their fur down every once in a while? You ended the day with " + goodCatPoints + " Good Cat Points."); 
 	}  else {
 	$("#game-over-text").html("Outstanding! You've improved on your daily model house cat performances and been an even better boy today. Congratulations on your daily total of " + goodCatPoints + " Good Cat Points!"); 
 	}
 
-}
+};
 

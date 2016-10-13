@@ -14,50 +14,36 @@ body {
 	background-color: $background-color;
 	color: $font-color;
 }
-// header {
-// 	text-align: left;
-// 	// display: inline;
-// }
 h1 {
 	font-family: $header-font;
 	font-size: $header-font-size;
 	margin: 0.5% 0 0.5% 0;
-	// float: left;
 }
 header > div {
-	//float: right;
 	margin: 1% 0 0 0;
 }
 h4 {
 	font-size: 2rem;
-	// margin: 1% 0 0.5% 0;
-	// padding: 10% 0;
-	// float: right;
-	// clear: right;
 	display: inline;
 }
 #player-info {
 	font-family: $header-font;
 }
 
-// header {
-// 	// header code
-// 	h1{
-// 		//h1 code
-// 	}
-// 	h4{
-
-// 	}
-// }
-
 .boxed {
 	border: 2px solid $font-color;
 	background-origin: border-box;
 	background-color: #555556;
+	position: relative;
 }
 img {
     width:100%; 
     height:100%;
+}
+#board-buttons {
+	position: absolute;
+	right: 0;
+	bottom: 0;
 }
 button {
 	border: 1px solid $font-color;
@@ -66,7 +52,6 @@ button {
 	float: right;
 	width: 75%;
 	margin: 0 15px 10px 0;
-	//padding: 5px 5px 5px 5px;
 	padding-left: 5px;
 	padding-right: 5px;
 	font-size: 1.3rem;
@@ -78,7 +63,6 @@ button:hover {
 area:hover {
 	background-color: #bc6584;
 }
-
 
 // help from http://www.sevensignature.com/blog/code/pure-css-popup-without-javascript/
 .overlay {
@@ -112,33 +96,16 @@ area:hover {
   color: #333;
   font-weight: bold;
   font-size: 1.7rem;
-
-  //font-family: Tahoma, Arial, sans-serif;
 }
-// .popup-box .close {
-//   position: absolute;
-//   top: 2%;
-//   right: 2%;
-//   transition: all 200ms;
-//   font-size: 30px;
-//   font-weight: bold;
-//   text-decoration: none;
-//   color: $background-color;
-// }
 .popup-box .close {
   position: absolute;
-  // top: 2%;
-  // right: 2%;
   bottom: 2%;
-  //text-align: center;
   transition: all 200ms;
-  //font-size: 30px;
   font-weight: bold;
   font-size: 2rem;
   text-decoration: none;
   color: $background-color;
 }
-
 .popup-box .close:hover {
   color: #06D85F;
 }
@@ -149,12 +116,7 @@ area:hover {
 #btn-1, #btn-2, #btn-3 {
 	width: 98%;
 	height: auto;
-	//white-space: normal;
-	//line-spacing: 5%;
 	font-weight: normal;
 	text-transform: none;
 	border-radius: 5px;
 }
-
-
-// 	TEST TEST TEST TEST

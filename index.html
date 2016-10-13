@@ -15,7 +15,6 @@
 
   <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<!--   <link href="http://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css"> -->
   <link href="https://fonts.googleapis.com/css?family=Mystery+Quest" rel="stylesheet">
 
   <!-- CSS
@@ -25,49 +24,44 @@
   <!-- BELOW ADDED BY ME -->
   <link rel="stylesheet" type="text/css" href="css/main.css">
 
-
-
-  <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<!--   <link rel="icon" type="image/png" href="images/favicon.png">
- -->
-
 </head>
+
 <body>
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <div class="container">
-
-  <header>
+<!-- Header containing game title & brief description of the object of the game, # of turns, etc. -->
+   <header>
     <h1>Who's a Good Cat?!</h1>
     <h5>It's your choice. Will you be a good cat? Or a bad cat?</h5>
     <p id="game-description">Your mission: to get through the day being as good of a cat as possible. Your human is away for the next 8 hours so you get 8 chances to prove how good you are. But hey, being bad can be fun too. And everyone knows, your human is going to love you anyway. Investigate the room for objects to interact with!</p>
   </header>
 
-    <div class="row">
+<!-- Creating a clickable div w/ each possible player cat, his characteristics, and his baseline # of Good Cat Points that he starts the day with. -->    
+  <div class="row">
 
-      <div class="four columns boxed" id="kirby" >
-        <img src="images/thumb_cat-sweet-kitty-animals-57416 copy_1024.jpg" alt="" title="" />
-        <h5>Kirby</h5>
-        <p>You're an orange and white fella with a knack for trouble and just can't help being naughty sometimes. Your reputation is not the greatest so you don't have a large cache of pre-existing good cat points. The expectations are low so any good behavior is memorable! <br><b>Good Cat Points: 10</b></p>
-      </div>
+    <div class="four columns boxed" id="kirby" >
+      <img src="images/thumb_cat-sweet-kitty-animals-57416 copy_1024.jpg" alt="" title="" />
+      <h5>Kirby</h5>
+      <p>You're an orange and white fella with a knack for trouble and just can't help being naughty sometimes. Your reputation is not the greatest so you don't have a large cache of pre-existing good cat points. The expectations are low so any good behavior is memorable! <br><b>Good Cat Points: 10</b></p>
+    </div>
 
-      <div class="four columns boxed" id="bennett" >
-        <img src="images/thumb_pexels-photo copy_1024.jpg" alt="" title=""/>
-        <h5>Bennett</h5>
-        <p>If naughtiness was limited to the kitchen and food, you'd be the worst cat ever! You steal tidbits, rip apart containers, and will stop at nothing for mayonnaise. Other than that, you're pretty average on the naughty scale. <br><b>Good Cat Points: 25</b></p>
-      </div>
+    <div class="four columns boxed" id="bennett" >
+      <img src="images/thumb_pexels-photo copy_1024.jpg" alt="" title=""/>
+      <h5>Bennett</h5>
+      <p>If naughtiness was limited to the kitchen and food, you'd be the worst cat ever! You steal tidbits, rip apart containers, and will stop at nothing for mayonnaise. Other than that, you're pretty average on the naughty scale. <br><b>Good Cat Points: 25</b></p>
+    </div>
 
-      <div class="four columns boxed" id="lewis" >
-        <img src="images/thumb_cat-feline-cat-face-cat-s-eyes-73819 copy_1024.jpg" alt="" title=""/>
-        <h5>Lewis</h5>
-        <p>You're a really good boy and rarely cause trouble. You prefer to be a clown and make everyone laugh. But when you're bad, it's shockingly unlike you. But you still get to ride your reputation as a good boy and no one takes you being a bad cat on occassion that seriously.<br><b>Good Cat Points: 40</b></p>
-      </div>
-
+    <div class="four columns boxed" id="lewis" >
+      <img src="images/thumb_cat-feline-cat-face-cat-s-eyes-73819 copy_1024.jpg" alt="" title=""/>
+      <h5>Lewis</h5>
+      <p>You're a really good boy and rarely cause trouble. You prefer to be a clown and make everyone laugh. But when you're bad, it's shockingly unlike you. But you still get to ride your reputation as a good boy and no one takes you being a bad cat on occassion that seriously.<br><b>Good Cat Points: 40</b></p>
     </div>
 
   </div>
+
+</div>
 
 
   <!-- JS
@@ -76,8 +70,6 @@
   <script type="text/javascript" src="scripts/appImageResizer.js"></script>
   <script type="text/javascript" src="scripts/app.js"></script>
   <script type="text/javascript" src="scripts/appCatPlayer.js"></script>
-<!--   <script type="text/javascript" src="scripts/appJqueryModal.js"></script>
- -->
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
