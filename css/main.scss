@@ -16,6 +16,7 @@ body {
 }
 header {
 	text-align: center;
+	margin: 0 0 1% 0;
 }
 header > h1 {
 	font-family: $header-font;
@@ -24,11 +25,11 @@ header > h1 {
 }
 header > h5 {
 	margin: 0.5% 0;
-	padding: 0.5% 0 1% 0;
+	padding: 0;
 }
 header > p {
 	margin: 0.5% 0;
-	padding: 0.5% 0 1% 0;
+	padding: 0;
 }
 h6 {
 	margin: 0.5% 0 0.5% 0;
@@ -37,14 +38,16 @@ h6 {
 div {
 	text-align: justify;
 }
+
 .boxed {
 	border: 2px solid $font-color;
 	//background-origin: border-box;
 	background-color: #555556;
+	height: 550px;
 }
 img {
     width:84%; 
-    height:84%;
+    height: auto;
     margin: 8% 8% 0 8%;
 }
 

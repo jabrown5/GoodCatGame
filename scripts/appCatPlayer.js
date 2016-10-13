@@ -21,6 +21,10 @@ var actionSleep = new Actions("You're a bit tired and are considering a nap.  Do
 var actionPuke = new Actions("You're laying on the couch and start to feel the rumblings of a hairball. Do you...",["Make a beeline for the hardwood.","Jump onto the floor and throw up on the rug.","Throw up on the couch."],[5,0,-5]);
 var actionCables = new Actions("The cables behind the TV look interesting. Do you...",["Take a sniff and be on your way.","Curl up and lay down. They're nice and warm.","Pick the most imporant looking cable and start chewing."],[2,1,-2]);
 var actionLamp = new Actions("The lamp looks interesting. Do you..",["Attempt to wear the shade as a hat.","Give it a sniff and quick 'rub' so everyone knows it's yours.","It's really not that interesting. Just stay put."],[-1,2,4]);
+var actionCouch = new Actions("You haven't 'done your nails' in a while and the couch is just sitting there. Do you..",["Ridiculous! There are better ways to do your nails.","Really get into it and claw with abandon.","Use the rug to do your nails instead."],[3,-4,-1]);
+var actionWindow = new Actions("Looking out the window is always relaxing. Do you..",["Press your nose against the glass and maybe sneeze or lick the window.","Dangle from the draps. It's much more fun.","Sit like a good cat on the windowsill and enjoy the view."],[0,-2,3]);
+var actionRemotes = new Actions("What are these remotes doing on your dais? Do you..",["Slap that crap right onto the floor where it belongs!!","Nudge them a bit but it's not really a priority.","Who cares? We are all sharing this space."],[-1,1,3]);
+
 
 $("#sleep-btn").on("click", function() {
 	$("#action-text").text(actionSleep.action);
@@ -47,6 +51,22 @@ $("#lamp").on("click", function() {
 	displayActionOptions(actionLamp.actionOptions);
 	actionButtonClick(actionLamp.score);
 });
+$("#couch").on("click", function() {
+	$("#action-text").text(actionCouch.action);
+	displayActionOptions(actionCouch.actionOptions);
+	actionButtonClick(actionCouch.score);
+});
+$("#window").on("click", function() {
+	$("#action-text").text(actionWindow.action);
+	displayActionOptions(actionWindow.actionOptions);
+	actionButtonClick(actionWindow.score);
+});
+$("#remotes").on("click", function() {
+	$("#action-text").text(actionRemotes.action);
+	displayActionOptions(actionRemotes.actionOptions);
+	actionButtonClick(actionRemotes.score);
+});
+
 
 function displayActionOptions(actionOptionArray) {
 	$("#btn-1").text(actionOptionArray[0])

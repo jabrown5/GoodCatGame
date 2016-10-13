@@ -15,33 +15,29 @@ header > h5 {
   margin: 0.5% 0;
   padding: 0.5% 0 1% 0; }
 
-header > p {
-  margin: 0.5% 0;
-  padding: 0.5% 0 1% 0; }
-
-div {
-  text-align: justify; }
+.row {
+  display: inline; }
 
 .boxed {
   border: 2px solid #e6e6ed;
   background-color: #555556; }
 
 img {
-  width: 90%;
-  height: 90%;
-  margin: 4% 5%; }
+  width: 92%;
+  height: 92%;
+  margin: 4% 4%; }
 
-div > h5 {
-  font-family: 'Mystery Quest', cursive;
+#cat-name {
+  font-family: "Mystery Quest", cursive;
   text-align: center;
-  margin: 0;
-  padding: 0; }
-
-p {
-  margin: 2% 8%;
-  float: right; }
+  margin-bottom: 2%; }
 
 #game-over {
-  height: 25%; }
+  height: 275px; }
+
+p {
+  padding: 5%;
+  text-align: justify;
+  font-size: 2rem; }
 
 /*# sourceMappingURL=game-over-main.css.map */

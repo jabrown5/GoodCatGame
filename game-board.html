@@ -42,19 +42,19 @@
 
     <header class="row">
       <div>
-        <h1 class="eight columns">Who's a Good Cat?!</h1>
+        <h1 class="five columns">Who's a Good Cat?!</h1>
+      </div>
+
+      <div class="three columns">
+        <h4>Cat: <span id="player-info"></span></h4>
       </div>
 
       <div class="two columns">
-        <h4 id="player-info"></h4>
+        <h4>GCP: <span id="score"></span></h4>
       </div>
 
-      <div class="one column">
-        <h4 id="score"></h4>
-      </div>
-
-      <div class="one column">
-        <h4 id="turn-info">8</h4>
+      <div class="two columns">
+        <h4>Turns: <span id="turn-info">8</span></h4>
       </div>
 
     </header>
@@ -88,9 +88,13 @@
 
             <area id="lamp" target="" alt="Lamp" title="Lamp" href="#popup-box" coords="14,1206,368,429" shape="rect">
  
-<!--             <area id="couch" target="" alt="Couch" title="Couch" href="#popup-box" coords="443,712,434,923,607,948,660,836,1024,789,970,689,943,687" shape="poly">
- -->
+            <area id="couch" target="" alt="Couch" title="Couch" href="#popup-box" coords="443,712,434,923,607,948,660,836,1024,789,970,689,943,687" shape="poly">
+
             <area id="tv" target="" alt="TV" title="TV" href="#popup-box" coords="1252,590,1255,935,1376,1004,1420,970,1455,852,1457,590" shape="poly">
+
+            <area id="window" target="" alt="Window" title="Window" href="#popup-box" coords="460,353,966,673" shape="rect">
+
+            <area id="remotes" target="remotes" alt="Remotes" title="Remotes" href="#popup-box" coords="700,860,862,838,1013,938,798,972" shape="poly">
 
         </map>
 
@@ -107,7 +111,7 @@
        <div id="popup-box" class="overlay">
         <div class="popup-box">
           <h6 id="action-text"></h6>
-          <a class="close" href="#">Move on to other cat business!</a>
+          <a class="close" href="#">Click here to move on to other cat business!</a>
           <div class="content">
             <button id="btn-1"></button>
             <button id="btn-2"></button>
@@ -143,8 +147,8 @@
   <script type="text/javascript" src="scripts/appImageResizer.js"></script>
   <script type="text/javascript" src="scripts/app.js"></script>
   <script type="text/javascript" src="scripts/appCatPlayer.js"></script>
-  <script type="text/javascript" src="scripts/appJqueryModal.js"></script>
-
+<!--   <script type="text/javascript" src="scripts/appJqueryModal.js"></script>
+ -->
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
