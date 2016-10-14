@@ -87,18 +87,20 @@ function actionButtonClick(actionScore) {
 	$("#btn-1").on("click", function() {
 		// UPDATE UPDATE UPDATE: refactor the score keeping into one separate function
 		goodCatPoints = parseInt(currentScore, 10) + (parseInt(actionScore[0], 10)*parseInt(weightedCatPoints));
+		localStorage.setItem('goodCatPoints',goodCatPoints);
 		closeActionBox();
 	});
 	$("#btn-2").on("click", function() {
 		goodCatPoints = parseInt(currentScore, 10) + (parseInt(actionScore[1], 10)*parseInt(weightedCatPoints));
+		localStorage.setItem('goodCatPoints',goodCatPoints);
 		closeActionBox();
 	});
 	$("#btn-3").on("click", function() {
 		goodCatPoints = parseInt(currentScore, 10) + (parseInt(actionScore[2], 10)*parseInt(weightedCatPoints));
+		localStorage.setItem('goodCatPoints',goodCatPoints);
 		closeActionBox();
 	});
 		playerObject.turnUpdate();
-		localStorage.setItem('goodCatPoints',currentScore);
 };
 
 // Closing the action box on click and updating the player score
@@ -108,4 +110,3 @@ function closeActionBox() {
 		$("#score").text(goodCatPoints);
 	});
 };
-

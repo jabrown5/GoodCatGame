@@ -48,5 +48,3 @@ $("#lewis").on("click", function() {
 	localStorage.setItem('weightedCatPoints',1);
 	window.location.replace("game-board.html");
 });
-
-
